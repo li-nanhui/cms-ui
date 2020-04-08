@@ -42,7 +42,7 @@ export default {
       // 交互
       request
         .request({
-          url: "http://localhost:8989/logs/saveOrUpdate",
+          url: "/logs/saveOrUpdate",
           method: "post",
           headers: {
             "Content-Type": "application/x-www-form-urlencoded"

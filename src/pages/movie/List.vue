@@ -98,7 +98,7 @@ methods:{
       })
     },
     reloadData(){
-      let url = "http://localhost:8989/movie/cascadeFindAll"
+      let url = "/movie/cascadeFindAll"
       request.get(url).then(response => {
         this.tableData = response.data;
       })
@@ -109,7 +109,7 @@ methods:{
         cancelButtonText: '取消',
         type: 'warning'
       }).then(() => {
-        let url = "http://localhost:8989/movie/deleteById"
+        let url = "/movie/deleteById"
         request.get(url,{params:{id}})
         .then(response=>{
           this.$message({

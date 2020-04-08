@@ -126,7 +126,7 @@ export default {
       })
     },
      reloadData(){
-      let url = "http://localhost:8989/user/findAll"
+      let url = "/user/findAll"
       request.get(url).then(response => {
         this.users = response.data;
       })
@@ -138,7 +138,7 @@ export default {
         cancelButtonText: '取消',
         type: 'warning'
       }).then(() => {
-        let url = "http://localhost:8989/user/deleteById"
+        let url = "/user/deleteById"
         request.get(url,{params:{id}})
         .then(response=>{
           this.$message({

@@ -49,7 +49,7 @@ export default {
       this.visible = true;
     },
     reloadData(){
-      let url = "http://localhost:8989/logs/cascadeFindAll"
+      let url = "/logs/cascadeFindAll"
       request.get(url).then(response => {
         this.tableData = response.data;
       })
@@ -60,7 +60,7 @@ export default {
         cancelButtonText: '取消',
         type: 'warning'
       }).then(() => {
-        let url = "http://localhost:8989/logs/deleteById"
+        let url = "/logs/deleteById"
         request.get(url,{params:{id}})
         .then(response=>{
           this.$message({

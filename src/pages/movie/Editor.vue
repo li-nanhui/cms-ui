@@ -59,7 +59,7 @@ export default {
     onSubmit(){
       // 交互
       request.request({
-        url:"http://localhost:8989/movie/saveOrUpdate",
+        url:"/movie/saveOrUpdate",
         method:"post",
         headers:{
           "Content-Type":"application/x-www-form-urlencoded"
